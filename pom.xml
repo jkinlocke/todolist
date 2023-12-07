@@ -65,6 +65,7 @@
             <artifactId>jaxb-runtime</artifactId>
             <version>3.0.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-core</artifactId>

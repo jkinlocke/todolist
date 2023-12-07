@@ -11,9 +11,45 @@
 <html>
 <head>
     <title>ToDo List</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: repeating-linear-gradient(
+                    black 5px, white 5px,
+                    transparent 1px, transparent 50px
+            );
+        }
+        .title-bubble {
+            display: inline-block;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1)
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 3px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
 </head>
 <body>
-<h2>ToDo List</h2>
+<div class="title-bubble">
+    <h2>ToDo List</h2>
+</div>
+
 <form action="AddItem" method="post">
     <label>
         <input type="text" name="item" placeholder="Add new item">

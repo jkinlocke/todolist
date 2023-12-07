@@ -3,13 +3,13 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import java.io.IOException;
-@WebServlet(name = "Servlets.AddItem", value = "/Servlets.AddItem")
+@WebServlet(name = "Servlets.AddItem", value = "/Servlets.addItem")
 public class AddItem extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Obtain the item to be added from the request
-        String newItem = request.getParameter("to_Do_item");
+        String newItem = request.getParameter("item");
 
         if (newItem != null && !newItem.isEmpty()) {
             // Instantiate your DAO class for database operations

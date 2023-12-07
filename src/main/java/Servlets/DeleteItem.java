@@ -3,13 +3,13 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import java.io.IOException;
-@WebServlet(name = "Servlets.DeleteItem", value = "/Servlets.DeleteItem")
+@WebServlet(name = "Servlets.DeleteItem", value = "/Servlets.deleteItem")
 public class DeleteItem extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Obtain the item to be deleted from the request
-        String itemToDelete = request.getParameter("to_Do_item");
+        String itemToDelete = request.getParameter("item");
 
         if (itemToDelete != null && !itemToDelete.isEmpty()) {
             // Instantiate your DAO class for database operations
